@@ -15,7 +15,80 @@
 </head>
 <body>
     <div id="app">
+        <div class="container">
+            <div class="row">
+                <div class="chat-container">
 
+                    <!-- Intestazione della pagina con il profilo dell'utente e il profilo della chat selezionata -->
+                    
+                    <div class="head d-flex">
+
+                        <!-- Profilo dell'utente -->
+
+                        <div class="user d-flex align-items-center justify-content-between ms-1">
+                            <div class="d-flex align-items-center ms-2">
+                                <img src="./img/avatar_io.jpg" alt="">
+                                <h5 class="ms-3">Sofia</h5>
+                            </div>
+                            <div class="d-flex me-3">
+                                <i class="fa-solid fa-circle-notch text-secondary fs-4 ps-2"></i>
+                                <i class="fa-solid fa-message text-secondary fs-4 ps-2"></i>
+                                <i class="fa-solid fa-ellipsis-vertical text-secondary fs-4 ps-2"></i>
+                            </div>
+                        </div>
+
+                        <!-- Intestazione chat attiva -->
+
+                        <div class="live-chat d-flex align-items-center justify-content-between ms-3">
+                            <div class="d-flex align-items-center ms-2">
+                                <img src="./img/avatar_1.jpg" alt="">
+                                <h5 class="ms-3">Michele</h5>
+                            </div>
+                            <div class="d-flex me-3">
+                                <i class="fa solid fa-magnifying-glass text-secondary fs-4 ps-2"></i>
+                                <i class="fa-solid fa-paperclip text-secondary fs-4 ps-2"></i>
+                                <i class="fa-solid fa-ellipsis-vertical text-secondary fs-4 ps-2"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Parte centrale -->
+
+                    <div class="main d-flex">
+
+                        <!-- Sidebar dove sono collocate le chat -->
+                        
+                        <div class="sidebar">
+                            
+                            <div class="d-flex bg-info align-items-center">
+                                <div class="bell ms-2">
+                                    <i class="fa-solid fa-bell-slash fs-4 text-info"></i>
+                                </div>
+                                <div class="align-items-center ms-3">
+                                    <h6 class="mt-2">Ricevi notifiche di nuovi messaggi</h6>
+                                    <p class="text-decoration-underline">Attiva notifiche desktop</p>
+                                </div>
+                            </div>
+                            
+                            <input type="text" placeholder="Cerca o inzia una nuova chat" class="form-control">
+                            
+                            <!-- Ciclo delle chat  -->
+                            
+                            <div class="chat-thumbs">
+                                <div v-for="(chat, index) in contacts" class="d-flex mt-2 ms-2 border-bottom">
+                                    <img :src="chat.avatar">
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Link Js Vue -->

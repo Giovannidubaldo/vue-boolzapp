@@ -8,3 +8,61 @@ body{
     height: 100vh;
     background-image: linear-gradient(rgb(52, 151, 106) 15vh, rgb(161, 161, 161) 15vh);
 }
+
+.chat-container{
+    margin: 30px auto;
+    height: calc(100vh - 60px);
+    background-color: white;
+}
+
+/* INTESTAZIONE E PARTE SUPERIORE DELLA PAGINA */
+
+.head{
+    height: 75px;
+    width: 100%;
+    background-color: rgb(199, 197, 197);
+}
+
+.user{
+    border-right: 1px solid grey;
+    width: 30%;
+    height: 100%;
+}
+
+.live-chat{
+    width: 70%;
+    height: 100%;
+}
+
+/* MAIN */
+
+.main{
+    width: 100%;
+    height: calc(100% - 75px)
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    height: 100%;
+    background-color: rgb(199, 197, 197);
+    width: 30%;
+    border-right: 1px solid grey;
+}
+
+.bell{
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.chat-thumbs{
+    
+}
+
+/* UTILITY */
+
+img{
+    height: 50px;
+    border-radius: 50%;
+}
