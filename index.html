@@ -55,9 +55,17 @@
                         <!-- Ciclo delle chat  -->
                         
                             <div class="chat-thumbs w-100">
-                                <div v-for="(chat, index) in contacts" class="d-flex align-items-center border-bottom p-2">
-                                    <img :src="chat.avatar">
-                                    <h5 class="ms-3">{{chat.name}}</h5>
+                                <div v-for="(chat, index) in contacts" class="d-flex align-items-center justify-content-between border-bottom p-2 cursor" @click="changeChat(index)" :class="activeChat === index ? 'active' : ''">
+                                    <div class="d-flex align-items-center">
+                                        <img :src="chat.avatar">
+                                        <div>
+                                            <h5 class="ms-3">{{chat.name}}</h5>
+                                            <span class="text-secondary ms-3">Ultimo messaggio inviato</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-secondary">12:00</span>
+                                    </div>
                                 </div>
                             </div> 
                     </div>
@@ -71,8 +79,8 @@
                         
                             <div class="live-chat d-flex align-items-center justify-content-between ms-3 w-100">
                                 <div class="d-flex align-items-center ms-2">
-                                    <img src="./img/avatar_1.jpg" alt="">
-                                    <h5 class="ms-3">Michele</h5>
+                                    <img :src="contacts[activeChat].avatar" alt="">
+                                    <h5 class="ms-3">{{contacts[activeChat].name}}</h5>
                                 </div>
                                 <div class="d-flex me-4">
                                     <i class="fa solid fa-magnifying-glass text-secondary fs-4 ps-2"></i>

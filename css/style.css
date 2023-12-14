@@ -40,6 +40,7 @@ body{
 
 .chat-thumbs{
     background-color: white;
+    overflow-y: auto;
 }
 
 /*****
@@ -63,6 +64,7 @@ body{
 .chat-content{
     background-image: url('../img/mine.jpg');
     height: calc(100% - 160px);
+    overflow-y: auto;
 }
 
 .sent-message{
@@ -93,4 +95,17 @@ body{
 img{
     height: 50px;
     border-radius: 50%;
+    cursor: pointer;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+i{
+    cursor: pointer;
+}
+
+.active{
+    background-color: #e9ebea;
 }
