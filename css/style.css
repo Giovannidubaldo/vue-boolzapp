@@ -11,41 +11,18 @@ body{
 
 .chat-container{
     margin: 30px auto;
+    max-width: 100%;
     height: calc(100vh - 60px);
     background-color: white;
 }
 
-/* INTESTAZIONE E PARTE SUPERIORE DELLA PAGINA */
-
-.head{
-    height: 75px;
-    width: 100%;
-    background-color: rgb(199, 197, 197);
-}
-
-.user{
-    border-right: 1px solid grey;
-    width: 30%;
-    height: 100%;
-}
-
-.live-chat{
-    width: 70%;
-    height: 100%;
-}
-
-/* MAIN */
-
-.main{
-    width: 100%;
-    height: calc(100% - 75px)
-}
-
-/* SIDEBAR */
+/*****
+ SIDEBAR 
+ *****/
 
 .sidebar{
     height: 100%;
-    background-color: rgb(199, 197, 197);
+    background-color: rgb(210, 210, 209);
     width: 30%;
     border-right: 1px solid grey;
 }
@@ -57,10 +34,43 @@ body{
 }
 
 .chat-thumbs{
-    
+    background-color: white;
 }
 
-/* UTILITY */
+/*****
+ MAIN 
+ *****/
+
+ .main{
+    height: 100%;
+    width: 70%;
+    background-color: rgb(199, 197, 197);
+ }
+
+/* INTESTAZIONE E PARTE SUPERIORE DELLA PARTE CENTRALE */
+
+.live-chat, .user{
+    height: 80px;
+    background-color: rgb(199, 197, 197);
+}
+
+/* CHAT IN CORSO */
+
+.chat-content{
+    background-image: url('../img/mine.jpg');
+    height: calc(100% - 160px);
+}
+
+/* BARRA PER MESSAGGI */
+
+.message-bar{
+    height: 80px;
+    background-color: rgb(210, 210, 209);
+}
+
+/*****
+ UTILITY 
+ *****/
 
 img{
     height: 50px;
