@@ -103,7 +103,7 @@
                         <div class="chat-content">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-12 mt-5">
+                                    <div class="mt-5">
                                         <div v-for="(mess, index) in contacts[activeChat].messages" :class="mess.status == 'sent' ? 'sent-message' : 'received-message'">
                                             {{mess.message}}
                                         </div>
