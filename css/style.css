@@ -73,7 +73,7 @@ body{
     padding: 10px;
     word-wrap: break-word;
     float: right;
-    clear: left;
+    clear: both;
 }
 
 .received-message{
@@ -86,7 +86,7 @@ body{
     padding: 10px;
     word-wrap: break-word;
     float: left;
-    clear: right;
+    clear: both;
 }
 
 /* BARRA PER MESSAGGI */
