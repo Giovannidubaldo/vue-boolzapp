@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data(){
         return{
+            search_chat: '',
             add_message: '',
             activeChat: 0,
             contacts: [
@@ -198,6 +199,17 @@ createApp({
                 date: '',
                 message: 'ok',
                 status: 'received'
+            })
+        },
+        searchChat(){
+            this.contacts.forEach((elem) => {
+                if(elem.name.toLowerCase().includes(this.search_chat.toLowerCase())){
+                    console.log(elem.name)
+                    elem.visible = true;
+                }
+                else{
+                    elem.visible = false;
+                }
             })
         }
     },
