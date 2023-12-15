@@ -26,55 +26,55 @@
                         
                         <!-- Profilo dell'utente -->
                         
-                            <div class="user d-flex align-items-center justify-content-between w-100">
-                                <div class="d-flex align-items-center ms-2">
-                                    <img src="./img/avatar_io.jpg" alt="">
-                                    <h5 class="ms-3">Sofia</h5>
-                                </div>
-                                <div class="d-flex me-3">
-                                    <i class="fa-solid fa-circle-notch text-secondary fs-4 ps-2"></i>
-                                    <i class="fa-solid fa-message text-secondary fs-4 ps-2"></i>
-                                    <i class="fa-solid fa-ellipsis-vertical text-secondary fs-4 ps-2"></i>
-                                </div>
+                        <div class="user d-flex align-items-center justify-content-between w-100">
+                            <div class="d-flex align-items-center ms-2">
+                                <img src="./img/avatar_io.jpg" alt="">
+                                <h5 class="ms-3">Sofia</h5>
                             </div>
+                            <div class="d-flex me-3">
+                                <i class="fa-solid fa-circle-notch text-secondary fs-4 ps-2"></i>
+                                <i class="fa-solid fa-message text-secondary fs-4 ps-2"></i>
+                                <i class="fa-solid fa-ellipsis-vertical text-secondary fs-4 ps-2"></i>
+                            </div>
+                        </div>
                             
-                            <!-- Attiva notifiche -->
+                        <!-- Attiva notifiche -->
 
-                            <div class="d-flex bg-info align-items-center w-100 height-80">
-                                <div class="bell ms-2">
-                                    <i class="fa-solid fa-bell-slash fs-4 text-info"></i>
-                                </div>
-                                <div class="align-items-center ms-3">
-                                    <h6 class="mt-2">Ricevi notifiche di nuovi messaggi</h6>
-                                    <p class="text-decoration-underline">Attiva notifiche desktop</p>
-                                </div>
+                        <div class="d-flex bg-info align-items-center w-100 height-80">
+                            <div class="bell ms-2">
+                                <i class="fa-solid fa-bell-slash fs-4 text-info"></i>
                             </div>
+                            <div class="align-items-center ms-3">
+                                <h6 class="mt-2">Ricevi notifiche di nuovi messaggi</h6>
+                                <p class="text-decoration-underline">Attiva notifiche desktop</p>
+                            </div>
+                        </div>
                             
-                            <!-- Sezione di ricerca chat -->
+                        <!-- Sezione di ricerca chat -->
 
-                            <div class="my-3 w-100 d-flex">
-                                <button class="btn btn-sm btn-light">
-                                    <i class="fa solid fa-magnifying-glass text-secondary fs-4 ps-2"></i>
-                                </button>
-                                <input type="text" placeholder="Cerca o inzia una nuova chat" class="form-control">
-                            </div>
+                        <div class="my-3 w-100 d-flex">
+                            <button class="btn btn-sm btn-light">
+                                <i class="fa solid fa-magnifying-glass text-secondary fs-4 ps-2"></i>
+                            </button>
+                            <input type="text" placeholder="Cerca o inzia una nuova chat" class="form-control">
+                        </div>
                         
                         <!-- Ciclo delle chat  -->
                         
-                            <div class="chat-thumbs w-100">
-                                <div v-for="(chat, index) in contacts" class="d-flex align-items-center justify-content-between border-bottom p-2 cursor" @click="changeChat(index)" :class="activeChat === index ? 'active' : ''">
-                                    <div class="d-flex align-items-center">
-                                        <img :src="chat.avatar">
-                                        <div>
-                                            <h5 class="ms-3">{{chat.name}}</h5>
-                                            <span class="text-secondary ms-3">Ultimo messaggio inviato</span>
-                                        </div>
-                                    </div>
+                        <div class="chat-thumbs w-100">
+                            <div v-for="(chat, index) in contacts" class="d-flex align-items-center justify-content-between border-bottom p-2 cursor" @click="changeChat(index)" :class="activeChat === index ? 'active' : ''">
+                                <div class="d-flex align-items-center">
+                                    <img :src="chat.avatar">
                                     <div>
-                                        <span class="text-secondary">12:00</span>
+                                        <h5 class="ms-3">{{chat.name}}</h5>
+                                        <span class="text-secondary ms-3">Ultimo messaggio inviato</span>
                                     </div>
                                 </div>
-                            </div> 
+                                <div>
+                                    <span class="text-secondary">12:00</span>
+                                </div>
+                            </div>
+                        </div> 
                     </div>
 
                      
@@ -84,48 +84,46 @@
                         
                         <!-- Intestazione chat attiva -->
                         
-                            <div class="live-chat d-flex align-items-center justify-content-between ms-3 w-100 height-80">
-                                <div class="d-flex align-items-center ms-2">
-                                    <img :src="contacts[activeChat].avatar" alt="">
-                                    <h5 class="ms-3">{{contacts[activeChat].name}}</h5>
-                                </div>
-                                <div class="d-flex me-4">
-                                    <i class="fa solid fa-magnifying-glass text-secondary fs-4 ps-2"></i>
-                                    <i class="fa-solid fa-paperclip text-secondary fs-4 ps-2"></i>
-                                    <i class="fa-solid fa-ellipsis-vertical text-secondary fs-4 ps-2"></i>
-                                </div>
+                        <div class="live-chat d-flex align-items-center justify-content-between ms-3 w-100 height-80">
+                            <div class="d-flex align-items-center ms-2">
+                                <img :src="contacts[activeChat].avatar" alt="">
+                                <h5 class="ms-3">{{contacts[activeChat].name}}</h5>
                             </div>
+                            <div class="d-flex me-4">
+                                <i class="fa solid fa-magnifying-glass text-secondary fs-4 ps-2"></i>
+                                <i class="fa-solid fa-paperclip text-secondary fs-4 ps-2"></i>
+                                <i class="fa-solid fa-ellipsis-vertical text-secondary fs-4 ps-2"></i>
+                            </div>
+                        </div>
                         
                         <!-- Chat in corso -->
 
-                            <div class="chat-content">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-12 mt-5">
-                                            <div v-for="(mess, index) in contacts[activeChat].messages" :class="mess.status == 'sent' ? 'sent-message' : 'received-message'">
-                                                {{mess.message}}
-                                            </div>
+                        <div class="chat-content">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 mt-5">
+                                        <div v-for="(mess, index) in contacts[activeChat].messages" :class="mess.status == 'sent' ? 'sent-message' : 'received-message'">
+                                            {{mess.message}}
                                         </div>
                                     </div>
                                 </div>
-                                
-                            </div>
+                            </div>    
+                        </div>
 
                         <!-- Barra per mandare messaggi -->
                             
-                            <div class="message-bar d-flex align-items-center w-100">
-                                <div class="col-2 d-flex justify-content-center">
-                                    <i class="fa-regular fa-face-smile text-secondary fs-4"></i>
-                                </div>
-                                <div class="col-8">
-                                    <input type="text" class="form-control" placeholder="Scrivi un messaggio">
-                                </div>
-                                <div class="col-2 d-flex justify-content-center">
-                                    <i class="fa-solid fa-microphone text-secondary fs-4"></i>
-                                </div>
+                        <div class="message-bar d-flex align-items-center w-100">
+                            <div class="col-2 d-flex justify-content-center">
+                                <i class="fa-regular fa-face-smile text-secondary fs-4"></i>
                             </div>
+                            <div class="col-8">
+                                <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="add_message" @keyup.enter="addNewMessage">
+                            </div>
+                            <div class="col-2 d-flex justify-content-center">
+                                <i class="fa-solid fa-microphone text-secondary fs-4"></i>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
