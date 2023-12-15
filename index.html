@@ -63,7 +63,12 @@
                         
                         <div class="chat-thumbs w-100">
                             <ul class="list-unstyled">
-                                <li v-show="chat.visible" v-for="(chat, index) in contacts" class="d-flex align-items-center justify-content-between border-bottom p-2 cursor" @click="changeChat(index)" :class="activeChat === index ? 'active' : ''">
+                                <li v-show="chat.visible" 
+                                v-for="(chat, index) in contacts" 
+                                class="my-d-flex align-items-center justify-content-between border-bottom p-2 cursor" 
+                                @click="changeChat(index)" 
+                                :class="activeChat === index ? 'active' : ''"
+                                :class="visible == true ? 'my-d-flex' : 'd-none'">
                                     <div class="d-flex align-items-center">
                                         <img :src="chat.avatar">
                                         <div>
@@ -103,7 +108,7 @@
                         <div class="chat-content">
                             <div class="container">
                                 <div class="row">
-                                    <div class="mt-5">
+                                    <div class="col-12 mt-5">
                                         <div v-for="(mess, index) in contacts[activeChat].messages" :class="mess.status == 'sent' ? 'sent-message' : 'received-message'">
                                             {{mess.message}}
                                         </div>

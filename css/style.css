@@ -122,3 +122,7 @@ i{
     height: 80px;
 }
 
+.my-d-flex{
+    display: flex;
+}
+
