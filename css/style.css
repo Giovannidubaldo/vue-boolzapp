@@ -41,6 +41,7 @@ body{
 .chat-thumbs{
     background-color: white;
     overflow-y: auto;
+    height: calc(100% - 240px);
 }
 
 /*****
@@ -52,12 +53,6 @@ body{
     width: 70%;
     background-color: rgb(199, 197, 197);
  }
-
-/* INTESTAZIONE E PARTE SUPERIORE DELLA PARTE CENTRALE */
-
-.live-chat{
-    height: 80px;
-}
 
 /* CHAT IN CORSO */
 
@@ -108,4 +103,8 @@ i{
 
 .active{
     background-color: #e9ebea;
+}
+
+.height-80{
+    height: 80px;
 }
