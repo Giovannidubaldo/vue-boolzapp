@@ -190,6 +190,15 @@ createApp({
             })
 
             this.add_message = '';
+
+            setTimeout(this.addReceivedMessage, 2000)
+        },
+        addReceivedMessage(){
+            this.contacts[this.activeChat].messages.push({
+                date: '',
+                message: 'ok',
+                status: 'received'
+            })
         }
     },
 }).mount('#app')
