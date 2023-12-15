@@ -80,7 +80,7 @@
                      
                     <!-- Parte centrale -->
                     
-                    <div class="main">
+                    <div class="central-content">
                         
                         <!-- Intestazione chat attiva -->
                         
@@ -99,16 +99,16 @@
                         <!-- Chat in corso -->
 
                             <div class="chat-content">
-                                <div class="col-12">
-                                    <div class="sent-message d-flex align-items-center ms-2 p-2">
-                                        messaggio
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 mt-5">
+                                            <div v-for="(mess, index) in contacts[activeChat].messages" :class="mess.status == 'sent' ? 'sent-message' : 'received-message'">
+                                                {{mess.message}}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-12">
-                                    <div class="received-message d-flex align-items-center ms-2 p-2">
-                                         messaggio
-                                    </div>
-                                </div>
+                                
                             </div>
 
                         <!-- Barra per mandare messaggi -->

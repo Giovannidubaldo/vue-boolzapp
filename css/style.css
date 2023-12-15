@@ -45,10 +45,10 @@ body{
 }
 
 /*****
- MAIN 
+ PARTE CENTRALE
  *****/
 
- .main{
+ .central-content{
     height: 100%;
     width: 70%;
     background-color: rgb(199, 197, 197);
@@ -64,16 +64,24 @@ body{
 
 .sent-message{
     height: 50px;
-    width: 200px;
+    width: 40%;
     background-color: #d5f9bb;
-    border-radius: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    margin: 10px 5px;
+    padding: 5px;
 }
 
 .received-message{
     height: 50px;
-    width: 200px;
+    width: 40%;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    margin: 10px 5px;
+    padding: 5px;
 }
 
 /* BARRA PER MESSAGGI */
@@ -108,3 +116,4 @@ i{
 .height-80{
     height: 80px;
 }
+
