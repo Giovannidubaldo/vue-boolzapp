@@ -115,6 +115,10 @@ body{
     display: block;
 }
 
+.dropdown li:hover{
+    color: grey;
+}
+
 /* BARRA PER MESSAGGI */
 
 .message-bar{

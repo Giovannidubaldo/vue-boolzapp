@@ -96,7 +96,7 @@
                                 <img :src="contacts[activeChat].avatar" alt="">
                                 <div class="ms-3">
                                     <h5>{{contacts[activeChat].name}}</h5>
-                                    <span>Ultimo accesso alle {{contacts[activeChat].messages.date}}</span>
+                                    <span>Ultimo accesso il {{contacts[activeChat].messages.date}}</span>
                                 </div>
                             </div>
                             <div class="d-flex me-4">
@@ -120,7 +120,7 @@
                                                         <i class="fa-solid fa-chevron-down text-secondary"></i>
                                                         <ul class="list-unstyled dropdown-content">
                                                             <li>Info messaggio</li>
-                                                            <li>Cancella messaggio</li>
+                                                            <li @click="deleteMessage(index)">Cancella messaggio</li>
                                                         </ul>
                                                     </li>
                                                 </ul>

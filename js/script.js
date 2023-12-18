@@ -6,10 +6,6 @@ createApp({
             search_chat: '',
             add_message: '',
             activeChat: 0,
-            messActive: {
-                index: false,
-                show: false
-            },
             contacts: [
                 {
                     name: 'Michele',
@@ -218,6 +214,9 @@ createApp({
         },
         lastMessage(index){
             return this.contacts[index].messages[this.contacts[index].messages.length - 1].message.slice(0,30) + '...';
+        },
+        deleteMessage(index){
+            this.contacts[this.activeChat].messages.splice(index, 1);
         }
     },
 }).mount('#app')
