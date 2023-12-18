@@ -6,6 +6,10 @@ createApp({
             search_chat: '',
             add_message: '',
             activeChat: 0,
+            messActive: {
+                index: false,
+                show: false
+            },
             contacts: [
                 {
                     name: 'Michele',

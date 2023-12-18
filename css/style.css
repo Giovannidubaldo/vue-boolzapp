@@ -85,6 +85,36 @@ body{
     position: relative;
 }
 
+.mess-date{
+    float: right;
+    font-size: 10px;
+}
+
+.dropdown{
+    display: none;
+}
+
+.dropdown-content{
+    display: none;
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    width: 200px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.sent-message:hover .dropdown, .received-message:hover .dropdown{
+    display: block;
+}
+
 /* BARRA PER MESSAGGI */
 
 .message-bar{
@@ -120,12 +150,6 @@ i{
 
 .my-d-flex{
     display: flex;
-}
-
-.mess-date{
-    float: right;
-    font-size: 10px;
-    margin-top: 5px;
 }
 
 
