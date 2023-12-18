@@ -96,7 +96,7 @@
                                 <img :src="contacts[activeChat].avatar" alt="">
                                 <div class="ms-3">
                                     <h5>{{contacts[activeChat].name}}</h5>
-                                    <span>Ultimo accesso il {{contacts[activeChat].messages.date}}</span>
+                                    <span>Ultimo accesso il {{dateLastMessage()}}</span>
                                 </div>
                             </div>
                             <div class="d-flex me-4">

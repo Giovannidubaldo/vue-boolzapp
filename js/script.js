@@ -213,10 +213,18 @@ createApp({
             })
         },
         lastMessage(index){
-            return this.contacts[index].messages[this.contacts[index].messages.length - 1].message.slice(0,30) + '...';
+            if(this.contacts[index].messages.length < 0){
+                return '';
+            }
+            else{
+                return this.contacts[index].messages[this.contacts[index].messages.length - 1].message.slice(0,20) + '...';
+            }
         },
         deleteMessage(index){
             this.contacts[this.activeChat].messages.splice(index, 1);
+        },
+        dateLastMessage(){
+            return this.contacts[this.activeChat].messages[this.contacts[this.activeChat].messages.length - 1].date
         }
     },
 }).mount('#app')
