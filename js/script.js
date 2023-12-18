@@ -192,7 +192,7 @@ createApp({
 
             this.add_message = '';
 
-            setTimeout(this.addReceivedMessage, 2000)
+            setTimeout(this.addReceivedMessage, 2000)  
         },
         addReceivedMessage(){
             this.contacts[this.activeChat].messages.push({
@@ -211,6 +211,9 @@ createApp({
                     elem.visible = false;
                 }
             })
+        },
+        lastMessage(index){
+            return this.contacts[index].messages[this.contacts[index].messages.length - 1].message.slice(0,30) + '...';
         }
     },
 }).mount('#app')
